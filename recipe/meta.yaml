@@ -19,6 +19,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make  # [not win]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
 
   host:
     - proj >=8.2
