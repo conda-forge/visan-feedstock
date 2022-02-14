@@ -14,14 +14,11 @@ build:
 
 requirements:
   build:
+    - sysroot_linux-64 2.17  # [linux64]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make  # [not win]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
 
   host:
     - proj >=8.2
