@@ -23,7 +23,8 @@ requirements:
   host:
     - proj >=8.2
     - python
-    - vtk >=9.1
+    - vtk >=9.1 osmesa*  # [linux]
+    - vtk >=9.1         # [not linux]
 
   run:
     - coda
@@ -31,7 +32,8 @@ requirements:
     - numpy
     - proj >=8.2
     - python
-    - vtk >=9.1
+    - vtk >=9.1 osmesa*  # [linux]
+    - vtk >=9.1         # [not linux]
     - wxpython
 
 test:
