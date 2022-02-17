@@ -32,8 +32,7 @@ requirements:
     - numpy
     - proj >=8.2
     - python
-    - vtk >=9.1 qt*  # [linux]
-    - vtk >=9.1         # [not linux]
+    - vtk >=9.1
     - wxpython
 
 test:
