@@ -1,4 +1,4 @@
-{% set version = "4.3.1" %}
+{% set version = "4.3.2" %}
 
 package:
   name: visan
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/stcorp/visan/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 991b7b09f35fc253493d0d6b47e1722ca915da3d4c68824cea7962e9b56d13ed
+  sha256: 4f52869e0f5a6a7f5af5bc43c0a9e8fe82ecda73ac40928823ad37bcaf8375db
 
 build:
-  number: 5
+  number: 0
   osx_is_app: true  # [osx]
 
 requirements:
