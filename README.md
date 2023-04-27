@@ -1,11 +1,11 @@
-About visan
-===========
+About visan-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/visan-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/stcorp/visan
 
 Package license: BSD-3-Clause-Clear
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/visan-feedstock/blob/main/LICENSE.txt)
 
 Summary: Visualization and Analysis application of the Atmospheric Toolbox
 
