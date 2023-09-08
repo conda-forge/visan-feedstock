@@ -13,17 +13,17 @@ if test "${CONDA_BUILD_CROSS_COMPILATION}" == "1"; then
 #!/bin/bash
 executable=\$1
 shift
-echo "PREFIX=$PREFIX"
-echo "BUILD_PREFIX=$BUILD_PREFIX"
-echo "executable=$executable"
+echo "PREFIX=\$PREFIX"
+echo "BUILD_PREFIX=\$BUILD_PREFIX"
+echo "executable=\$executable"
 if [[ \$executable == "\$PREFIX"* ]] ; then
   executable=\$BUILD_PREFIX\${executable#\$PREFIX}
-  echo "executable=$executable"
+  echo "executable=\$executable"
 fi
 \$executable \$@
 _EOF
   chmod 755 crosswrapper.sh
-  CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_CROSSCOMPILING_EMULATOR=${PWD}/crosswrapper.sh"
+  CMAKE_ARGS="${CMAKE_ARGS} -DVERBOSE=1 -DCMAKE_CROSSCOMPILING_EMULATOR=${PWD}/crosswrapper.sh"
 fi
 
 export CMAKE_LIBRARY_PATH=$PREFIX/lib
