@@ -23,7 +23,7 @@ fi
 \$executable \$@
 _EOF
   chmod 755 crosswrapper.sh
-  CMAKE_ARGS="${CMAKE_ARGS} -DVERBOSE=1 -DCMAKE_CROSSCOMPILING_EMULATOR=${PWD}/crosswrapper.sh"
+  CMAKE_ARGS="${CMAKE_ARGS} -DCMAKE_CROSSCOMPILING_EMULATOR=${PWD}/crosswrapper.sh"
 fi
 
 export CMAKE_LIBRARY_PATH=$PREFIX/lib
@@ -35,5 +35,5 @@ cmake $CMAKE_ARGS \
   -DPython3_EXECUTABLE=$PREFIX/bin/python \
   ..
 
-make -j$CPU_COUNT
+make -j$CPU_COUNT VERBOSE=1
 make install
