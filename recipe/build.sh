@@ -13,9 +13,12 @@ if test "${CONDA_BUILD_CROSS_COMPILATION}" == "1"; then
 #!/bin/bash
 executable=\$1
 shift
-  if [[ \$executable == "\$PREFIX"* ]] ; then
-    executable=\$BUILD_PREFIX\${executable#\$PREFIX}
-  fi
+echo "PREFIX=$PREFIX"
+echo "BUILD_PREFIX=$BUILD_PREFIX"
+echo "executable=$executable"
+if [[ \$executable == "\$PREFIX"* ]] ; then
+  executable=\$BUILD_PREFIX\${executable#\$PREFIX}
+  echo "executable=$executable"
 fi
 \$executable \$@
 _EOF
