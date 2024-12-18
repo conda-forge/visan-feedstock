@@ -9,7 +9,7 @@ source:
   sha256: bd8e0677644d362efb0ecc2d5e23dc81b6d0aab3c99030f3fa2bb51573bcaed8
 
 build:
-  number: 0
+  number: 1
   osx_is_app: true  # [osx]
 
 requirements:
